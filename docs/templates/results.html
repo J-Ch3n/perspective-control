@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- <h1>{% block title %} Results {% endblock %}</h1> -->
+    <h1>Toxicity Results</h1>
+    <hr>
+    {% for comment in comments %}
+    <!-- Lists comments and their toxicity score -->
+    <div class='container'>
+        <Grid wrap={2} direction="row" justify="flex-start" alignItems="flex-start" 
+
+            <br>
+            <div class="card">
+                <div class="body">
+                    <p><strong>{{ comment['comment'] }}</strong></p>
+                    <hr>
+                    <p>{{ comment['score'] }} likely to be toxic</p>
+                </div>
+            </div>
+
+        </Grid>
+    </div>
+    {% endfor %}
+{% endblock %}

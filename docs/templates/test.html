@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <!-- <h1>{% block title %} Test Comment {% endblock %}</h1> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <h1>Test a New Comment</h1>
+                <hr>
+                
+                <form method="POST" autocomplete="off">
+
+                    <div class="form-group">
+                        <label style="font-size: x-large;">Enter a comment:</label>
+                        <br>
+                        <br>
+                        <input class="form-control" type="text" name="comment"
+                           placeholder="Comment..."
+                           autocomplete="off"
+                           value="{{ request.form['comment'] }}">
+                        </input>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" 
+                    style="background-color: #f3e7f9; 
+                    border-color: #fdd7fd;
+                    color: #666">Submit</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

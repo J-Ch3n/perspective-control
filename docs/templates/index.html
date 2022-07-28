@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- <h1>{% block title %} Instructions {% endblock %}</h1> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+    
+                <h1>User Guide</h1>
+                <hr>
+                
+                <p>This is an algorithm that uses AI to predict the toxicity of text comments.</p>
+                <li>Submit a comment you want to test on the "Test Comment" page </li>
+                <li>When you click submit, you will see all tested comments and their toxicity scores</li>
+                <li><strong>After testing, choose a % threshold of toxicity for your platform</strong></li>
+                <li><strong>The AI will flag all content that is at or above this toxicity threshold</strong></li>
+                <li>When you have decided on a toxicity threshold, please go to the form. Do not close any tabs. </li>
+                <p>In general, decreasing the threshold for different decisions increases the likelihood that a given toxic content may be caught, but simultaneously may increase the number of incorrectly flagged comments (false positives).</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
