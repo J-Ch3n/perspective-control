@@ -61,7 +61,7 @@ def results(comment):
     # Flash toxicity score
     flash('This comment is ' + percentage + ' likely to be toxic')
     # Add comment and score to the "database" here
-    comments.append({'comment': comment, 'score': percentage})
+    comments.insert(0, {'comment': comment, 'score': percentage})
 
     # Return all comments and toxicity scores
     return render_template('results.html', comments=comments)
